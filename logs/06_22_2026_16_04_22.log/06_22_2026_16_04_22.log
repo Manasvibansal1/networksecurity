@@ -1,0 +1,29 @@
+[ 2026-06-22 16:04:43,662 ] 42 root - INFO - Start data Ingestion
+[ 2026-06-22 16:04:43,944 ] 96 pymongo.serverSelection - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6a390fc39928eaf554adff29, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-njxf8fd-shard-00-00.bcgjaqx.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-njxf8fd-shard-00-01.bcgjaqx.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-njxf8fd-shard-00-02.bcgjaqx.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6a390fc39928eaf554adff29"}, "remainingTimeMS": 29}
+[ 2026-06-22 16:04:47,466 ] 85 root - INFO - Performed train test split on the dataframe
+[ 2026-06-22 16:04:47,466 ] 87 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-06-22 16:04:47,466 ] 95 root - INFO - Exporting train and test file path.
+[ 2026-06-22 16:04:47,490 ] 104 root - INFO - Exported train and test file path.
+[ 2026-06-22 16:04:47,490 ] 45 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts/06_22_2026_16_04_22/data_ingestion/ingested/train.csv', test_file_path='Artifacts/06_22_2026_16_04_22/data_ingestion/ingested/test.csv')
+[ 2026-06-22 16:04:47,493 ] 55 root - INFO - Initiate the data Validation
+[ 2026-06-22 16:04:47,499 ] 32 root - INFO - Required number of columns:2
+[ 2026-06-22 16:04:47,499 ] 33 root - INFO - Data frame has columns:31
+[ 2026-06-22 16:04:47,499 ] 32 root - INFO - Required number of columns:2
+[ 2026-06-22 16:04:47,499 ] 33 root - INFO - Data frame has columns:31
+[ 2026-06-22 16:04:47,562 ] 63 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2026-06-22 16:04:47,562 ] 65 root - INFO - Starting data transformation
+[ 2026-06-22 16:04:47,568 ] 48 root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2026-06-22 16:04:47,568 ] 53 root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-06-22 16:04:47,571 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-06-22 16:04:47,573 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-06-22 16:04:47,573 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-06-22 16:04:47,573 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-06-22 16:06:18,878 ] 60 root - WARNING - MLflow tracking failed (skipping): 403: You have reached the limit of 100 experiments for a private repository in the free plan.
+Please upgrade to the Team plan to increase the limit at https://dagshub.com/pricing?repo_id=52439
+[ 2026-06-22 16:06:24,725 ] 60 root - WARNING - MLflow tracking failed (skipping): 403: You have reached the limit of 100 experiments for a private repository in the free plan.
+Please upgrade to the Team plan to increase the limit at https://dagshub.com/pricing?repo_id=52439
+[ 2026-06-22 16:06:24,730 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-06-22 16:06:24,750 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-06-22 16:06:24,750 ] 46 root - INFO - Entered the save_object method of MainUtils class
+[ 2026-06-22 16:06:24,760 ] 50 root - INFO - Exited the save_object method of MainUtils class
+[ 2026-06-22 16:06:24,760 ] 125 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/06_22_2026_16_04_22/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9910471783522784, precision_score=0.9885611077664058, recall_score=0.9935457845905608), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9787941787941788, precision_score=0.9759535655058044, recall_score=0.981651376146789))
